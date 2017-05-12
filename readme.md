@@ -7,7 +7,7 @@
 ## Examples
 
 #### Example1
-<img src="./img/table_example_1.png">
+<img src="./img/table_example_1.png" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example2
-<img src="./img/table_example_2.png"/>
+<img src="./img/table_example_2.png" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example3
-<img src="./img/table_example_3.png"/>
+<img src="./img/table_example_3.png" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example4
-<img src="./img/table_example_4.png"/>
+<img src="./img/table_example_4.png" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example5
-<img src="./img/table_example_5.png"/>
+<img src="./img/table_example_5.png" width="375"/>
 
 ```jsx
 import React, { Component } from "react";

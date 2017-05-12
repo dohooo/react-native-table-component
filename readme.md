@@ -1,5 +1,5 @@
 # React Native Easy Table
----
+<br/><br/>
 ## Examples
 
 #### Example1
@@ -221,14 +221,14 @@
     listText: { textAlign: 'right', marginRight: 6 }
   })
   ```
----
+<br/><br/>
 
 ## Properties
 | Prop              | Type  | Description | Default |
 |---|---|---|---|
 | <b>data</b>       | Array | Table data. | `null` |
 | <b>style</b>      | Style | Container style. | `null` |
-| <b>borderStyle</b>| Object| Table border line width and color. | `{ borderWidth: 0.5, borderColor: #000 }` |
+| <b>borderStyle</b>| Object| Table border line width and color. | `{ borderWidth: 1, borderColor: #000 }` |
 | <b>textStyle</b>  | Style | Cell font style. | `null` |
 | <b>flexArr</b>    | Array | Flex value per column. | `[]` |
 | <b>widthArr</b>   | Array | Width per column. | `[]` |

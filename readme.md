@@ -1,5 +1,5 @@
 # React Native Easy Table
-
+---
 ## Examples
 
 #### Example1
@@ -221,7 +221,7 @@
     listText: { textAlign: 'right', marginRight: 6 }
   })
   ```
-
+---
 
 ## Properties
 | Prop              | Type  | Description | Default |

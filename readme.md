@@ -8,6 +8,7 @@
 
 #### Example1
 <img src="./img/table_example_1.png">
+
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
 
 #### Example2
 <img src="./img/table_example_2.png"/>
+
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
 
 #### Example3
 <img src="./img/table_example_3.png"/>
+
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
@@ -119,6 +122,7 @@ const styles = StyleSheet.create({
 
 #### Example4
 <img src="./img/table_example_4.png"/>
+
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
@@ -167,6 +171,7 @@ const styles = StyleSheet.create({
 
 #### Example5
 <img src="./img/table_example_5.png"/>
+
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";

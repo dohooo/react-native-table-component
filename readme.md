@@ -9,7 +9,7 @@
 ## Installation
 > npm install react-native-table-component
 
-  *USE:*
+  `USE:`
   ```jsx
   import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
   ```

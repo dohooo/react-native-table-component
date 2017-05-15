@@ -12,7 +12,7 @@
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from '../utils/table';
+import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-easy-table';
 
 class tableView extends Component {
   render() {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from '../utils/table';
+import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-easy-table';
 
 class tableView extends Component {
   render() {
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from '../utils/table';
+import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-easy-table';
 
 class tableView extends Component {
   render() {
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from '../utils/table';
+import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-easy-table';
 
 class tableThreeView extends Component {
   render() {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from '../utils/table';
+import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-easy-table';
 
 class tableFourView extends Component {
   render() {

@@ -1,13 +1,21 @@
 # React Native Table Component
+[![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component)![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg)
 
+- [Installation](#installation)
 - [Examples](#examples)
 - [Properties](#properties)
 <br/><br/>
 
+## Installation
+> npm install react-native-table-component
+  ```jsx
+  import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+  ```
+
 ## Examples
 
 #### Example1
-<img src="./img/table_example_1.png" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_1.png?raw=true" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -43,7 +51,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example2
-<img src="./img/table_example_2.png" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_2.png?raw=true" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -81,7 +89,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example3
-<img src="./img/table_example_3.png" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_3.png?raw=true" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -121,7 +129,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example4
-<img src="./img/table_example_4.png" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_4.png?raw=true" width="375"/>
 
 ```jsx
 import React, { Component } from "react";
@@ -170,7 +178,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example5
-<img src="./img/table_example_5.png" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_5.png?raw=true" width="375"/>
 
 ```jsx
 import React, { Component } from "react";

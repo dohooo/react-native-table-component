@@ -1,0 +1,25 @@
+{
+  "name": "react-native-table-component",
+  "version": "1.0.1",
+  "description": "Build table for react native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gil2015/react-native-table-component.git"
+  },
+  "keywords": [
+    "react-native",
+    "table",
+    "react-native-table",
+    "react-native-table-component"
+  ],
+  "author": "gil2015",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gil2015/react-native-table-component/issues"
+  },
+  "homepage": "https://github.com/Gil2015/react-native-table-component#readme"
+}

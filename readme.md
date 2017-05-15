@@ -1,4 +1,4 @@
-# React Native Easy Table
+# React Native Table Component
 
 - [Examples](#examples)
 - [Properties](#properties)

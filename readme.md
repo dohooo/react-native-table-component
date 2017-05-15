@@ -11,6 +11,7 @@
   ```jsx
   import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
   ```
+<br/><br/>
 
 ## Examples
 

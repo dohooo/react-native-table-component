@@ -77,7 +77,7 @@ class tableView extends Component {
       <View>
         <Table style={styles.table} borderStyle={{borderWidth: 0.5, borderColor: '#c8e1ff'}}>
           <Row data={tableHead} style={styles.head} textStyle={styles.text} flexArr={[1, 2, 1, 2]}/>
-          <Cols data={tableData2} textStyle={styles.text} heightArr={[20, 50]} widthArr={[60, 120, 60, 120]}/>
+          <Cols data={tableData} textStyle={styles.text} heightArr={[20, 50]} widthArr={[60, 120, 60, 120]}/>
         </Table>
       </View>
     )

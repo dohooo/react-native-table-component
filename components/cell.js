@@ -21,7 +21,7 @@ class Cell extends Component {
     } else {
       borderColor = '#000';
     }
-console.log(style)
+
     return (
       <View style={[
         {

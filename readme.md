@@ -4,6 +4,7 @@
 This is a table component for react native.
 
 - [Installation](#installation)
+- [Changelogs](#Changelogs)
 - [Examples](#examples)
 - [Properties](#properties)
 <br/><br/>
@@ -13,8 +14,13 @@ This is a table component for react native.
 
   `USE:`
   ```jsx
-  import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+  import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
   ```
+<br/><br/>
+
+## Changelogs
++ [v1.0.3]
+  - <span style="color:red">'Wrpaer' changed to 'Wrapper'<span>;
 <br/><br/>
 
 ## Examples
@@ -25,7 +31,7 @@ This is a table component for react native.
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableView extends Component {
   render() {
@@ -61,7 +67,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableView extends Component {
   render() {
@@ -99,7 +105,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableView extends Component {
   render() {
@@ -113,10 +119,10 @@ class tableView extends Component {
       <View>
         <Table>
           <Row data={tableHead} flexArr={[1, 2, 1, 1]} style={styles.head} textStyle={styles.text}/>
-          <TableWraper style={{flexDirection: 'row'}}>
+          <TableWrapper style={{flexDirection: 'row'}}>
             <Col data={tableTitle} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/>
             <Rows data={tableData} flexArr={[2, 1, 1]} style={styles.row}/>
-          </TableWraper>
+          </TableWrapper>
         </Table>
       </View>
     )
@@ -139,7 +145,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableThreeView extends Component {
   render() {
@@ -153,19 +159,19 @@ class tableThreeView extends Component {
     return (
       <View style={style.con}>
         <Table style={{flexDirection: 'row'}}>
-          {/* Left wraper */}
-          <TableWraper style={{width: 80}}>
+          {/* Left Wrapper */}
+          <TableWrapper style={{width: 80}}>
             <Cell data="Head" style={styles.singleHead}/>
-            <TableWraper style={{flexDirection: 'row'}}>
+            <TableWrapper style={{flexDirection: 'row'}}>
               <Col data={['Head2', 'Head3']} style={styles.head} heightArr={[56, 56]}/>
               <Col data={['Title', 'Title2', 'Title3', 'Title4']} style={styles.title} heightArr={[28, 28, 28, 28]} textStyle={styles.text}></Col>
-            </TableWraper>
-          </TableWraper>
+            </TableWrapper>
+          </TableWrapper>
 
-          {/* Right wraper */}
-          <TableWraper style={{flex:1}}>
+          {/* Right Wrapper */}
+          <TableWrapper style={{flex:1}}>
             <Rows data={tableData} style={{height: 28}}/>
-          </TableWraper>
+          </TableWrapper>
         </Table>
       </View>
     )
@@ -188,7 +194,7 @@ const styles = StyleSheet.create({
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import { Table, TableWraper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableFourView extends Component {
   render() {
@@ -206,27 +212,27 @@ class tableFourView extends Component {
     return (
       <View style={style.con}>
         <Table style={styles.table}>
-          {/* Left wraper */}
-          <TableWraper style={{width: 80}}>
+          {/* Left Wrapper */}
+          <TableWrapper style={{width: 80}}>
             <Cell data="Head" style={styles.head} textStyle={styles.headText}/>
             {
               tableTitle.map((title, i) => (
                 <Cell key={i} data={title} height={28} style={[styles.title, i%2 && {backgroundColor: '#DFF5F2'}]} textStyle={styles.titleText}/>
               ))
             }
-          </TableWraper>
+          </TableWrapper>
 
-          {/* Right scrollview wraper */}
+          {/* Right scrollview Wrapper */}
           <ScrollView horizontal={true}>
             {/* If parent element is not table element, you should add the type of borderstyle. */}
-            <TableWraper borderStyle={{borderWidth: 1,borderColor: '#000',}}>
+            <TableWrapper borderStyle={{borderWidth: 1,borderColor: '#000',}}>
               <Row data={tableHead} style={styles.head} textStyle={styles.headText} widthArr={widthArr}/>
               {
                 tableData.map((data, i) => (
                   <Row key={i} data={data} style={[styles.list, i%2 && {backgroundColor: '#DFF5F2'}]} widthArr={widthArr} textStyle={styles.listText}/>
                 ))
               }
-            </TableWraper>
+            </TableWrapper>
           </ScrollView>
         </Table>
       </View>

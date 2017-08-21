@@ -47,7 +47,7 @@ class Table extends Component {
   }
 }
 
-class TableWraper extends Component {
+class TableWrapper extends Component {
   static propTypes = {
     style: View.propTypes.style,
   }
@@ -74,4 +74,4 @@ class TableWraper extends Component {
   }
 }
 
-export {Table, TableWraper};
+export {Table, TableWrapper};

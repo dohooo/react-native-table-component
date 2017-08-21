@@ -1,6 +1,6 @@
 {
   "name": "react-native-table-component",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "Build table for react native.",
   "main": "index.js",
   "scripts": {

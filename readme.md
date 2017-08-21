@@ -83,7 +83,7 @@ class tableView extends Component {
       <View>
         <Table style={styles.table} borderStyle={{borderWidth: 0.5, borderColor: '#c8e1ff'}}>
           <Row data={tableHead} style={styles.head} textStyle={styles.text} flexArr={[1, 2, 1, 2]}/>
-          <Cols data={tableData} textStyle={styles.text} heightArr={[20, 50]} widthArr={[60, 120, 60, 120]}/>
+          <Cols data={tableData} textStyle={styles.text} heightArr={[20, 50]} flexArr={[1, 2, 1, 2]}/>
         </Table>
       </View>
     )
@@ -131,8 +131,8 @@ class tableView extends Component {
 
 const styles = StyleSheet.create({
   head: { height: 40, backgroundColor: '#f1f8ff' },
-  title: { flex: 1 backgroundColor: '#f6f8fa' },
-  row: { height: 30 },
+  title: { flex: 1, backgroundColor: '#f6f8fa' },
+  row: { height: 28 },
   text: { textAlign: 'center' }
 })
 ```
@@ -157,7 +157,7 @@ class tableThreeView extends Component {
       ['', '', ''],
     ]
     return (
-      <View style={style.con}>
+      <View>
         <Table style={{flexDirection: 'row'}}>
           {/* Left Wrapper */}
           <TableWrapper style={{width: 80}}>
@@ -210,14 +210,14 @@ class tableFourView extends Component {
     const widthArr = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60];
 
     return (
-      <View style={style.con}>
+      <View>
         <Table style={styles.table}>
           {/* Left Wrapper */}
           <TableWrapper style={{width: 80}}>
             <Cell data="Head" style={styles.head} textStyle={styles.headText}/>
             {
               tableTitle.map((title, i) => (
-                <Cell key={i} data={title} height={28} style={[styles.title, i%2 && {backgroundColor: '#DFF5F2'}]} textStyle={styles.titleText}/>
+                <Cell key={i} data={title} height={28} style={i%2 && {backgroundColor: '#DFF5F2'}} textStyle={styles.titleText}/>
               ))
             }
           </TableWrapper>
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
   head: { backgroundColor: '#333', height: 40 },
   headText: { color: '#fff', textAlign: 'center' },
   titleText: { marginLeft: 6 },
-  list: { height: 30, backgroundColor: '#f0f0f0' },
+  list: { height: 28, backgroundColor: '#f0f0f0' },
   listText: { textAlign: 'right', marginRight: 6 }
 })
 ```

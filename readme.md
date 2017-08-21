@@ -19,8 +19,8 @@ This is a table component for react native.
 <br/><br/>
 
 ## Changelogs
-+ [v1.0.4]
-  - <span style="color:red">'Wraper' changed to 'Wrapper'<span>;
++ [v1.0.3]
+  - <p style="color:red">'Wraper' changed to 'Wrapper'<p>;
 <br/><br/>
 
 ## Examples

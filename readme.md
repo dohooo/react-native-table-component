@@ -20,7 +20,7 @@ This is a table component for react native.
 
 ## Changelogs
 + [v1.0.3]
-  - 'Wraper' changed to 'Wrapper';
+  - 'TableWraper' changed to 'TableWrapper';
 <br/><br/>
 
 ## Examples

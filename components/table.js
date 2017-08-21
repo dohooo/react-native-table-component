@@ -20,7 +20,7 @@ class Table extends Component {
   }
 
   render() {
-    let borderWidth,borderColor;
+    let borderWidth, borderColor;
     if (this.props.borderStyle && this.props.borderStyle.borderWidth) {
       borderWidth = this.props.borderStyle.borderWidth;
     } else {

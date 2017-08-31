@@ -264,4 +264,5 @@ const styles = StyleSheet.create({
 | <b>heightArr</b>  | Array | Height per line. | `[]` |
 
 ---
-If this helps you, please give a star. `_(:3 」∠)_`
+If this helps you, please give a star. Thank u. `_(:3 」∠)_`
+

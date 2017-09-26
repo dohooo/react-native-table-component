@@ -1,5 +1,5 @@
 # React Native Table Component
-[![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) [![npm](https://img.shields.io/npm/dm/react-native-table-component.svg)](https://www.npmjs.com/package/react-native-table-component)
+[![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
 This is a table component for react native.
 

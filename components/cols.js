@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 import Cell from './cell';
 
 class Col extends Component {
   static propTypes = {
-    width: React.PropTypes.number,
-    heightArr: React.PropTypes.array,
-    flexArr: React.PropTypes.array,
-    data: React.PropTypes.array,
+    width: PropTypes.number,
+    heightArr: PropTypes.array,
+    flexArr: PropTypes.array,
+    data: PropTypes.array,
     style: View.propTypes.style,
     textStyle: Text.propTypes.style,
   }
@@ -36,10 +37,10 @@ class Col extends Component {
 
 class Cols extends Component {
   static propTypes = {
-    widthArr: React.PropTypes.array,
-    heightArr: React.PropTypes.array,
-    flexArr: React.PropTypes.array,
-    data: React.PropTypes.array,
+    widthArr: PropTypes.array,
+    heightArr: PropTypes.array,
+    flexArr: PropTypes.array,
+    data: PropTypes.array,
     style: View.propTypes.style,
     textStyle: Text.propTypes.style,
   }

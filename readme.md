@@ -147,7 +147,7 @@ import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
-class tableThreeView extends Component {
+class tableView extends Component {
   render() {
     const tableData = [
       ['', '', ''],
@@ -196,7 +196,7 @@ import React, { Component } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
-class tableFourView extends Component {
+class tableView extends Component {
   render() {
     const tableHead = ['Head2', 'Head3', 'Head4', 'Head5', 'Head6', 'Head7', 'Head8', 'Head9', 'Head10','Head11'];
     const tableTitle = ['Title', 'Title2', 'Tilte3', 'Title4', 'Title5'];
@@ -249,6 +249,58 @@ const styles = StyleSheet.create({
   listText: { textAlign: 'right', marginRight: 6 }
 })
 ```
+
+---
+
+#### Example6
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_6.png?raw=true" width="375"/>
+
+```jsx
+import React, { Component } from 'react';
+import { Alert, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+
+class tableView extends Component {
+  _alert = (value) => {
+    Alert.alert(value);
+  }
+
+  render() {
+    const ele = (value) => (
+      <TouchableOpacity onPress={() => this._alert(value)}>
+        <View style={styles.btn}>
+          <Text style={styles.btnText}>button</Text>
+        </View>
+      </TouchableOpacity>
+    );
+
+    const tableData = [
+      ['1', '2', '3', ele('line 1')],
+      ['a', 'b', 'c', ele('line 2')],
+      ['1', '2', '3', ele('line 3')],
+      ['a', 'b', 'c', ele('line 4')],
+    ];
+  
+    return (
+      <View style={styles.con}>
+        <Table>
+          <Rows data={tableData} style={styles.row} textStyle={styles.text}/>
+        </Table>
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  con: { paddingTop: 50, paddingLeft: 10, paddingRight: 10 },
+  text: { marginLeft: 5 },
+  row: { height: 30, flexDirection: 'row' },
+  btn: { width: 58, height: 18, backgroundColor: '#ccc', marginLeft: 15 },
+  btnText: { textAlign: 'center', color: '#fff' },
+});
+```
+
+---
 
 <br/><br/>
 

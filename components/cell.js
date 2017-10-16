@@ -10,6 +10,9 @@ class Cell extends Component {
 
   render() {
     const {data, width, height, flex, style, textStyle} = this.props;
+    const textDom = React.isValidElement(data) ? data : (
+        <Text style={[textStyle, styles.text]}>{data}</Text>
+      );
     let borderWidth,borderColor;
     if (this.props.borderStyle && this.props.borderStyle.borderWidth) {
       borderWidth = this.props.borderStyle.borderWidth;
@@ -36,7 +39,7 @@ class Cell extends Component {
         !width && !flex && !height && {flex: 1},
         style
       ]}>
-        <Text style={[textStyle, styles.text]}>{data}</Text>
+        {textDom}
       </View>
     )
   }

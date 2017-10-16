@@ -21,6 +21,8 @@ This is a table component for react native.
 ## Changelogs
 + [v1.0.3]
   - 'TableWraper' changed to 'TableWrapper';
++ [v1.1.1]
+  - Data supports incoming Element types;
 <br/><br/>
 
 ## Examples
@@ -93,7 +95,7 @@ class tableView extends Component {
 const styles = StyleSheet.create({
   table: { width: 360 },
   head: { height: 40, backgroundColor: '#f1f8ff' },
-  text: { textAlign: 'center' },
+  text: { textAlign: 'center' }
 })
 ```
 
@@ -113,7 +115,7 @@ class tableView extends Component {
     const tableTitle = ['Title', 'Title2'];
     const tableData = [
       ['', '', ''],
-      ['', '', ''],
+      ['', '', '']
     ];
     return (
       <View>
@@ -154,7 +156,7 @@ class tableView extends Component {
       ['', '', ''],
       ['', '', ''],
       ['', '', ''],
-      ['', '', ''],
+      ['', '', '']
     ]
     return (
       <View>
@@ -205,7 +207,7 @@ class tableView extends Component {
       ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
       [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10],
       ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
-      [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10],
+      [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10]
     ];
     const widthArr = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60];
 
@@ -278,7 +280,7 @@ class tableView extends Component {
       ['1', '2', '3', ele('line 1')],
       ['a', 'b', 'c', ele('line 2')],
       ['1', '2', '3', ele('line 3')],
-      ['a', 'b', 'c', ele('line 4')],
+      ['a', 'b', 'c', ele('line 4')]
     ];
   
     return (
@@ -296,7 +298,7 @@ const styles = StyleSheet.create({
   text: { marginLeft: 5 },
   row: { height: 30, flexDirection: 'row' },
   btn: { width: 58, height: 18, backgroundColor: '#ccc', marginLeft: 15 },
-  btnText: { textAlign: 'center', color: '#fff' },
+  btnText: { textAlign: 'center', color: '#fff' }
 });
 ```
 

@@ -284,7 +284,7 @@ class tableView extends Component {
     ];
   
     return (
-      <View style={styles.con}>
+      <View>
         <Table>
           <Rows data={tableData} style={styles.row} textStyle={styles.text}/>
         </Table>
@@ -294,9 +294,8 @@ class tableView extends Component {
 }
 
 const styles = StyleSheet.create({
-  con: { paddingTop: 50, paddingLeft: 10, paddingRight: 10 },
   text: { marginLeft: 5 },
-  row: { height: 30, flexDirection: 'row' },
+  row: { height: 30 },
   btn: { width: 58, height: 18, backgroundColor: '#ccc', marginLeft: 15 },
   btnText: { textAlign: 'center', color: '#fff' }
 });

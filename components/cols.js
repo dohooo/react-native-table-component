@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
 import Cell from './cell';
 
 class Col extends Component {
@@ -9,7 +9,7 @@ class Col extends Component {
     heightArr: PropTypes.array,
     flexArr: PropTypes.array,
     data: PropTypes.array,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
   }
 
@@ -19,8 +19,8 @@ class Col extends Component {
     return (
       data ?
       <View style={[
-        width ? {width: width} : {flex: 1}, 
-        flex && {flex: flex}, 
+        width ? {width: width} : {flex: 1},
+        flex && {flex: flex},
         style
       ]}>
         {
@@ -41,7 +41,7 @@ class Cols extends Component {
     heightArr: PropTypes.array,
     flexArr: PropTypes.array,
     data: PropTypes.array,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
   }
 

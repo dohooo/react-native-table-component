@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, ViewPropTypes, Text } from 'react-native';
 
 class Table extends Component {
   static propTypes = {
-    style: View.propTypes.style,
-    borderStyle: View.propTypes.style,
+    style: ViewPropTypes.style,
+    borderStyle: ViewPropTypes.style,
   }
 
   _renderChildren(props) {
@@ -30,7 +30,7 @@ class Table extends Component {
       borderColor = this.props.borderStyle.borderColor;
     } else {
       borderColor = '#000';
-    }   
+    }
 
     return (
       <View style={[
@@ -49,7 +49,7 @@ class Table extends Component {
 
 class TableWrapper extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
   }
 
   _renderChildren(props) {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
 
 class Cell extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
-    borderStyle: View.propTypes.style,
+    borderStyle: ViewPropTypes.style,
   }
 
   render() {

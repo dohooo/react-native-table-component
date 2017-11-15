@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 
 class Cell extends Component {
   static propTypes = {
@@ -9,7 +9,7 @@ class Cell extends Component {
   }
 
   render() {
-    const {data, width, height, flex, style, textStyle} = this.props;
+    const {data, width, height, flex, style, textStyle, onPress} = this.props;
     const textDom = React.isValidElement(data) ? data : (
         <Text style={[textStyle, styles.text]}>{data}</Text>
       );
@@ -26,21 +26,24 @@ class Cell extends Component {
     }
 
     return (
-      <View style={[
-        {
-          borderTopWidth: borderWidth,
-          borderRightWidth: borderWidth,
-          borderColor: borderColor,
-        },
-        styles.cell,
-        width && {width: width},
-        height && {height: height},
-        flex && {flex: flex},
-        !width && !flex && !height && {flex: 1},
-        style
-      ]}>
-        {textDom}
-      </View>
+      <TouchableWithoutFeedback onPress={onPress}>
+        <View style={[
+          {
+            borderTopWidth: borderWidth,
+            borderRightWidth: borderWidth,
+            borderColor: borderColor,
+          },
+          styles.cell,
+          width && {width: width},
+          height && {height: height},
+          flex && {flex: flex},
+          !width && !flex && !height && {flex: 1},
+          style
+        ]}>
+          {textDom}
+        </View>
+      </TouchableWithoutFeedback>
+      
     )
   }
 }

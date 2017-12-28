@@ -14,7 +14,7 @@ class Cell extends Component {
         <Text style={[textStyle, styles.text]}>{data}</Text>
       );
     let borderWidth,borderColor;
-    if (this.props.borderStyle && this.props.borderStyle.borderWidth) {
+    if (this.props.borderStyle && this.props.borderStyle.borderWidth !== undefined) {
       borderWidth = this.props.borderStyle.borderWidth;
     } else {
       borderWidth = 1;

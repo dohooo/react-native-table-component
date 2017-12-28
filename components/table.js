@@ -21,7 +21,7 @@ class Table extends Component {
 
   render() {
     let borderWidth, borderColor;
-    if (this.props.borderStyle && this.props.borderStyle.borderWidth) {
+    if (this.props.borderStyle && this.props.borderStyle.borderWidth !== undefined) {
       borderWidth = this.props.borderStyle.borderWidth;
     } else {
       borderWidth = 1;

@@ -7,7 +7,7 @@ This is a table component for react native.
 - [Changelogs](#Changelogs)
 - [Examples](#examples)
 - [Properties](#properties)
-- [License](#License)
+- [License](#license)
 <br/><br/>
 
 ## Installation

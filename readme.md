@@ -7,6 +7,7 @@ This is a table component for react native.
 - [Changelogs](#Changelogs)
 - [Examples](#examples)
 - [Properties](#properties)
+- [License](#License)
 <br/><br/>
 
 ## Installation
@@ -316,6 +317,7 @@ const styles = StyleSheet.create({
 | <b>widthArr</b>   | Array | Width per column. | `[]` |
 | <b>heightArr</b>  | Array | Height per line. | `[]` |
 
+<br/><br/>
 
 ## License
 

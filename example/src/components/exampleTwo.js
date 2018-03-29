@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col } from '../react-native-table-component';
+import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 
 export default class ExampleTwo extends Component {
   static navigationOptions = {

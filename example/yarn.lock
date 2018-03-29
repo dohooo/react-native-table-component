@@ -4259,9 +4259,9 @@ react-native-safe-area-view@^0.7.0:
   dependencies:
     prop-types "^15.6.0"
 
-react-native-table-component@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/react-native-table-component/-/react-native-table-component-1.1.5.tgz#e8d06eed3c3faec88f78272e20ccff03b6f0ae35"
+react-native-table-component@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npmjs.org/react-native-table-component/-/react-native-table-component-1.1.6.tgz#62041e3ab3cd259e62eef5f3780c9e6f96f370dc"
 
 react-native@0.54.3:
   version "0.54.3"

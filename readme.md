@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example3
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleThree.png?raw=true" width="320"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleThree.gif?raw=true" width="320"/>
 
 ```jsx
 import React, { Component } from 'react';
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example4
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFour.png?raw=true" width="320"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFour.gif?raw=true" width="320"/>
 
 ```jsx
 import React, { Component } from 'react';
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
 ---
 
 #### Example5
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFive.png?raw=true" width="320"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFive.gif?raw=true" width="320"/>
 
 ```jsx
 import React, { Component } from 'react';
@@ -350,6 +350,7 @@ const styles = StyleSheet.create({
 
 `Notice`
 + Cells in Col and Cols components do not support adaptive height.
++ Cell components use the margin property to control the inner margins, and do not use padding
 + If parent element is not table element, you should add the type of borderstyle.
 
 ```jsx

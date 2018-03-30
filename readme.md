@@ -2,21 +2,23 @@
 [![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
 This is a table component for react native.
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/example.jpg?raw=true" width="375"/>
 
 - [Installation](#installation)
 - [Changelogs](#Changelogs)
 - [Examples](#examples)
 - [Properties](#properties)
+- [Notice](#Notice)
 - [License](#license)
 <br/><br/>
 
 ## Installation
 > npm install react-native-table-component
 
-  `USE:`
-  ```jsx
-  import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-  ```
+`USE:`
+```jsx
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+```
 <br/><br/>
 
 ## Changelogs
@@ -346,11 +348,16 @@ const styles = StyleSheet.create({
 | <b>widthArr</b>   | Array | Width per column. | `[]` |
 | <b>heightArr</b>  | Array | Height per line. | `[]` |
 
+---
+
+
+
 <br/><br/>
 
-`Notice`
+## Notice
+
 + Cells in Col and Cols components do not support adaptive height.
-+ Cell components use the margin property to control the inner margins, and do not use padding
++ Please set the magin value in the textStyle property to adjust the padding and do not use the padding.
 + If parent element is not table element, you should add the type of borderstyle.
 
 ```jsx

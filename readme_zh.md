@@ -1,18 +1,18 @@
 # React Native Table Component
 [![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
-This is a table component for react native.
-[切换到中文文档](https://github.com/Gil2015/react-native-table-component/blob/master/readme_zh.md)
+为react-native设计的表格组件.
+[Switch to English document](https://github.com/Gil2015/react-native-table-component#Changelogs)
 
-- [Installation](#installation)
-- [Changelogs](#changelogs)
-- [Examples](#examples)
-- [Properties](#properties)
-- [Notice](#notice)
+- [安装](#安装)
+- [版本日志](#版本日志)
+- [示例](#示例)
+- [组件属性](#组件属性)
+- [注意事项](#注意事项)
 - [License](#license)
 <br/><br/>
 
-## Installation
+## 安装
 > npm install react-native-table-component
 
 `USE:`
@@ -24,16 +24,16 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 
 <br/><br/>
 
-## Changelogs
+## 版本日志
 + [v1.0.3]
-  - 'TableWraper' changed to 'TableWrapper';
+  - 组件名 'TableWraper' 改为 'TableWrapper';
 + [v1.1.1]
-  - Data supports incoming Element types
+  - data属性内可以插入自定义组件
 <br/><br/>
 
 ## Examples
 
-#### Example1
+#### 例一
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleOne.png?raw=true" width="320"/>
 
 ```jsx
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 
 ---
 
-#### Example2
+#### 例二
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleTwo.png?raw=true" width="320"/>
 
 ```jsx
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
 
 ---
 
-#### Example3
+#### 例三
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleThree.gif?raw=true" width="320"/>
 
 ```jsx
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
 
 ---
 
-#### Example4
+#### 例四
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFour.gif?raw=true" width="320"/>
 
 ```jsx
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
 
 ---
 
-#### Example5
+#### 例五
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFive.gif?raw=true" width="320"/>
 
 ```jsx
@@ -303,7 +303,7 @@ export default class ExampleFive extends Component {
     return (
       <View style={styles.container}>
         <Table style={{flexDirection: 'row'}}>
-          {/* Left Wrapper */}
+          {/* 左边模块 */}
           <TableWrapper style={{width: 80}}>
             <Cell data="" style={styles.singleHead}/>
             <TableWrapper style={{flexDirection: 'row'}}>
@@ -312,7 +312,7 @@ export default class ExampleFive extends Component {
             </TableWrapper>
           </TableWrapper>
 
-          {/* Right Wrapper */}
+          {/* 右边模块 */}
           <TableWrapper style={{flex:1}}>
             <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30]} textStyle={styles.text}/>
           </TableWrapper>
@@ -340,16 +340,16 @@ const styles = StyleSheet.create({
 
 <br/><br/>
 
-## Properties
-| Prop              | Type  | Description | Default |
+## 组件属性
+| 属性              | 类型  | 描述 | 默认值 |
 |---|---|---|---|
-| <b>data</b>       | Array | Table data. | `null` |
-| <b>style</b>      | Style | Container style. | `null` |
-| <b>borderStyle</b>| Object| Table border line width and color. | `{ borderWidth: 1, borderColor: #000 }` |
-| <b>textStyle</b>  | Style | Cell font style. | `null` |
-| <b>flexArr</b>    | Array | Flex value per column. | `[]` |
-| <b>widthArr</b>   | Array | Width per column. | `[]` |
-| <b>heightArr</b>  | Array | Height per line. | `[]` |
+| <b>data</b>       | Array | 组件数据 | `null` |
+| <b>style</b>      | Style | 组件style样式 | `null` |
+| <b>borderStyle</b>| Object| 表格边框样式 | `{ borderWidth: 1, borderColor: #000 }` |
+| <b>textStyle</b>  | Style | 子项文字样式 | `null` |
+| <b>flexArr</b>    | Array | 每列的flex值 | `[]` |
+| <b>widthArr</b>   | Array | 每列的宽度值 | `[]` |
+| <b>heightArr</b>  | Array | 每行的高度值 | `[]` |
 
 ---
 
@@ -357,15 +357,15 @@ const styles = StyleSheet.create({
 
 <br/><br/>
 
-## Notice
+## 注意事项
 
-+ Cells in Col and Cols components do not support adaptive height.
-+ Please set the magin value in the textStyle property to adjust the padding and do not use the padding.
-+ If parent element is not table element, you should add the type of borderstyle.
++ Col和Cols里的单元格无法做到每行自适应高度
++ 请在textStyle属性里设置margin值来调整内边距，不要用padding值
++ 如果父元素不是Table组件，需要设置borderStyle属性
 
 ```jsx
 <ScrollView horizontal={true}>
-  {/* If parent element is not table element, you should add the type of borderstyle. */}
+  {/* 如果父元素不是Table组件，需要设置borderStyle属性 */}
   <TableWrapper borderStyle={{borderWidth: 2,borderColor: 'blue',}}>
     <Cols data={data} />
   </TableWrapper>

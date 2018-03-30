@@ -2,7 +2,6 @@
 [![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
 This is a table component for react native.
-[切换到中文文档](https://github.com/Gil2015/react-native-table-component/blob/master/readme_zh.md)
 
 - [Installation](#installation)
 - [Changelogs](#changelogs)
@@ -10,6 +9,8 @@ This is a table component for react native.
 - [Properties](#properties)
 - [Notice](#notice)
 - [License](#license)
+
+[切换到中文文档](https://github.com/Gil2015/react-native-table-component/blob/master/readme_zh.md)
 <br/><br/>
 
 ## Installation
@@ -361,12 +362,12 @@ const styles = StyleSheet.create({
 
 + Cells in Col and Cols components do not support adaptive height.
 + Please set the magin value in the textStyle property to adjust the padding and do not use the padding.
-+ If parent element is not table element, you should add the type of borderstyle.
++ If parent element is not Table component，please add the type of borderstyle.
 
 ```jsx
 <ScrollView horizontal={true}>
-  {/* If parent element is not table element, you should add the type of borderstyle. */}
-  <TableWrapper borderStyle={{borderWidth: 2,borderColor: 'blue',}}>
+  {/* If parent element is not Table component，please add the type of borderstyle. */}
+  <TableWrapper borderStyle={{borderWidth: 2, borderColor: 'blue',}}>
     <Cols data={data} />
   </TableWrapper>
 </ScrollView>

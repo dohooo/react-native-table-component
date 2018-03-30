@@ -2,7 +2,6 @@
 [![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
 为react-native设计的表格组件.
-[Switch to English document](https://github.com/Gil2015/react-native-table-component#Changelogs)
 
 - [安装](#安装)
 - [版本日志](#版本日志)
@@ -10,6 +9,8 @@
 - [组件属性](#组件属性)
 - [注意事项](#注意事项)
 - [License](#license)
+
+[Switch to English document](https://github.com/Gil2015/react-native-table-component#Changelogs)
 <br/><br/>
 
 ## 安装
@@ -359,14 +360,14 @@ const styles = StyleSheet.create({
 
 ## 注意事项
 
-+ Col和Cols里的单元格无法做到每行自适应高度
++ Col和Cols里的单元格无法做到每行自适应高度
 + 请在textStyle属性里设置margin值来调整内边距，不要用padding值
 + 如果父元素不是Table组件，需要设置borderStyle属性
 
 ```jsx
 <ScrollView horizontal={true}>
   {/* 如果父元素不是Table组件，需要设置borderStyle属性 */}
-  <TableWrapper borderStyle={{borderWidth: 2,borderColor: 'blue',}}>
+  <TableWrapper borderStyle={{borderWidth: 2, borderColor: 'blue',}}>
     <Cols data={data} />
   </TableWrapper>
 </ScrollView>

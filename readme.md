@@ -4,10 +4,10 @@
 This is a table component for react native.
 
 - [Installation](#installation)
-- [Changelogs](#Changelogs)
+- [Changelogs](#changelogs)
 - [Examples](#examples)
 - [Properties](#properties)
-- [Notice](#Notice)
+- [Notice](#notice)
 - [License](#license)
 <br/><br/>
 

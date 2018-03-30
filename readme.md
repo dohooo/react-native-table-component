@@ -23,32 +23,40 @@ This is a table component for react native.
 + [v1.0.3]
   - 'TableWraper' changed to 'TableWrapper';
 + [v1.1.1]
-  - Data supports incoming Element types;
+  - Data supports incoming Element types
 <br/><br/>
 
 ## Examples
 
 #### Example1
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_1.png?raw=true" width="375"/>
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleOne.png?raw=true" width="320"/>
 
 ```jsx
-import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Table, Row, Rows } from 'react-native-table-component';
 
-class tableView extends Component {
+export default class ExampleOne extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableHead: ['Head', 'Head2', 'Head3', 'Head4'],
+      tableData: [
+        ['1', '2', '3', '4'],
+        ['a', 'b', 'c', 'd'],
+        ['1', '2', '3', '456\n789'],
+        ['a', 'b', 'c', 'd']
+      ]
+    }
+  }
+
   render() {
-    const tableHead = ['Head', 'Head2', 'Head3', 'Head4'];
-    const tableData = [
-      ['1', '2', '3', '4'],
-      ['a', 'b', 'c', 'd'],
-    ];
-  
+    const state = this.state;
     return (
-      <View>
-        <Table>
-          <Row data={tableHead} style={styles.head} textStyle={styles.text}/>
-          <Rows data={tableData} style={styles.row} textStyle={styles.text}/>
+      <View style={styles.container}>
+        <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
+          <Row data={state.tableHead} style={styles.head} textStyle={styles.text}/>
+          <Rows data={state.tableData} textStyle={styles.text}/>
         </Table>
       </View>
     )
@@ -56,187 +64,47 @@ class tableView extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
   head: { height: 40, backgroundColor: '#f1f8ff' },
-  text: { marginLeft: 5 },
-  row: { height: 30 }
-})
-```
-
----
-
-#### Example2
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_2.png?raw=true" width="375"/>
-
-```jsx
-import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-
-class tableView extends Component {
-  render() {
-    const tableHead = ['Head', 'Head2', 'Head3', 'Head4'];
-    const tableData = [
-      ['1', 'a'],
-      ['2', 'b'],
-      ['3', 'c'],
-      ['4', 'd']
-    ]
-  
-    return (
-      <View>
-        <Table style={styles.table} borderStyle={{borderWidth: 0.5, borderColor: '#c8e1ff'}}>
-          <Row data={tableHead} style={styles.head} textStyle={styles.text} flexArr={[1, 2, 1, 2]}/>
-          <Cols data={tableData} textStyle={styles.text} heightArr={[20, 50]} flexArr={[1, 2, 1, 2]}/>
-        </Table>
-      </View>
-    )
-  }
-}
-
-const styles = StyleSheet.create({
-  table: { width: 360 },
-  head: { height: 40, backgroundColor: '#f1f8ff' },
-  text: { textAlign: 'center' }
-})
-```
-
----
-
-#### Example3
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_3.png?raw=true" width="375"/>
-
-```jsx
-import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-
-class tableView extends Component {
-  render() {
-    const tableHead = ['Head', 'Head2', 'Head3', 'Head4'];
-    const tableTitle = ['Title', 'Title2'];
-    const tableData = [
-      ['', '', ''],
-      ['', '', '']
-    ];
-    return (
-      <View>
-        <Table>
-          <Row data={tableHead} flexArr={[1, 2, 1, 1]} style={styles.head} textStyle={styles.text}/>
-          <TableWrapper style={{flexDirection: 'row'}}>
-            <Col data={tableTitle} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/>
-            <Rows data={tableData} flexArr={[2, 1, 1]} style={styles.row}/>
-          </TableWrapper>
-        </Table>
-      </View>
-    )
-  }
-}
-
-const styles = StyleSheet.create({
-  head: { height: 40, backgroundColor: '#f1f8ff' },
-  title: { flex: 1, backgroundColor: '#f6f8fa' },
-  row: { height: 28 },
-  text: { textAlign: 'center' }
-})
-```
-
----
-
-#### Example4
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_4.png?raw=true" width="375"/>
-
-```jsx
-import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-
-class tableView extends Component {
-  render() {
-    const tableData = [
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', '']
-    ]
-    return (
-      <View>
-        <Table style={{flexDirection: 'row'}}>
-          {/* Left Wrapper */}
-          <TableWrapper style={{width: 80}}>
-            <Cell data="Head" style={styles.singleHead}/>
-            <TableWrapper style={{flexDirection: 'row'}}>
-              <Col data={['Head2', 'Head3']} style={styles.head} heightArr={[56, 56]}/>
-              <Col data={['Title', 'Title2', 'Title3', 'Title4']} style={styles.title} heightArr={[28, 28, 28, 28]} textStyle={styles.text}></Col>
-            </TableWrapper>
-          </TableWrapper>
-
-          {/* Right Wrapper */}
-          <TableWrapper style={{flex:1}}>
-            <Rows data={tableData} style={{height: 28}}/>
-          </TableWrapper>
-        </Table>
-      </View>
-    )
-  }
-}
-
-const styles = StyleSheet.create({
-  singleHead: { width: 80, height: 30, backgroundColor: '#c8e1ff' },
-  head: { flex: 1, backgroundColor: '#c8e1ff' },
-  title: { flex: 2, backgroundColor: '#f6f8fa' },
-  text: { marginRight: 6, textAlign:'right' }
+  text: { margin: 6 }
 });
 ```
 
 ---
 
-#### Example5
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_5.png?raw=true" width="375"/>
+#### Example2
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleTwo.png?raw=true" width="320"/>
 
 ```jsx
-import React, { Component } from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 
-class tableView extends Component {
+export default class ExampleTwo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableHead: ['', 'Head1', 'Head2', 'Head3'],
+      tableTitle: ['Title', 'Title2', 'Title3', 'Title4'],
+      tableData: [
+        ['1', '2', '3'],
+        ['a', 'b', 'c'],
+        ['1', '2', '3'],
+        ['a', 'b', 'c']
+      ]
+    }
+  }
+
   render() {
-    const tableHead = ['Head2', 'Head3', 'Head4', 'Head5', 'Head6', 'Head7', 'Head8', 'Head9', 'Head10','Head11'];
-    const tableTitle = ['Title', 'Title2', 'Tilte3', 'Title4', 'Title5'];
-    const tableData = [
-      [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10],
-      ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
-      [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10],
-      ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
-      [1 ,2, 3, 4, 5, 6, 7, 8, 9, 10]
-    ];
-    const widthArr = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60];
-
+    const state = this.state;
     return (
-      <View>
-        <Table style={styles.table}>
-          {/* Left Wrapper */}
-          <TableWrapper style={{width: 80}}>
-            <Cell data="Head" style={styles.head} textStyle={styles.headText}/>
-            {
-              tableTitle.map((title, i) => (
-                <Cell key={i} data={title} height={28} style={i%2 && {backgroundColor: '#DFF5F2'}} textStyle={styles.titleText}/>
-              ))
-            }
+      <View style={styles.container}>
+        <Table>
+          <Row data={state.tableHead} flexArr={[1, 2, 1, 1]} style={styles.head} textStyle={styles.text}/>
+          <TableWrapper style={styles.wrapper}>
+            <Col data={state.tableTitle} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/>
+            <Rows data={state.tableData} flexArr={[2, 1, 1]} style={styles.row} textStyle={styles.text}/>
           </TableWrapper>
-
-          {/* Right scrollview Wrapper */}
-          <ScrollView horizontal={true}>
-            {/* If parent element is not table element, you should add the type of borderstyle. */}
-            <TableWrapper borderStyle={{borderWidth: 1,borderColor: '#000',}}>
-              <Row data={tableHead} style={styles.head} textStyle={styles.headText} widthArr={widthArr}/>
-              {
-                tableData.map((data, i) => (
-                  <Row key={i} data={data} style={[styles.list, i%2 && {backgroundColor: '#DFF5F2'}]} widthArr={widthArr} textStyle={styles.listText}/>
-                ))
-              }
-            </TableWrapper>
-          </ScrollView>
         </Table>
       </View>
     )
@@ -244,50 +112,136 @@ class tableView extends Component {
 }
 
 const styles = StyleSheet.create({
-  table: { width: 360, flexDirection: 'row' },
-  head: { backgroundColor: '#333', height: 40 },
-  headText: { color: '#fff', textAlign: 'center' },
-  titleText: { marginLeft: 6 },
-  list: { height: 28, backgroundColor: '#f0f0f0' },
-  listText: { textAlign: 'right', marginRight: 6 }
-})
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+  head: {  height: 40,  backgroundColor: '#f1f8ff'  },
+  wrapper: { flexDirection: 'row' },
+  title: { flex: 1, backgroundColor: '#f6f8fa' },
+  row: {  height: 28  },
+  text: { textAlign: 'center' }
+});
 ```
 
 ---
 
-#### Example6
-<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/table_example_6.png?raw=true" width="375"/>
+#### Example3
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleThree.png?raw=true" width="320"/>
 
 ```jsx
 import React, { Component } from 'react';
-import { Alert, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { StyleSheet, View, ScrollView } from 'react-native';
+import { Table, TableWrapper, Row } from 'react-native-table-component';
 
-class tableView extends Component {
-  _alert = (value) => {
-    Alert.alert(value);
+export default class ExampleThree extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableHead: ['Head', 'Head2', 'Head3', 'Head4', 'Head5', 'Head6', 'Head7', 'Head8', 'Head9'],
+      widthArr: [40, 60, 80, 100, 120, 140, 160, 180, 200]
+    }
   }
 
   render() {
-    const ele = (value) => (
-      <TouchableOpacity onPress={() => this._alert(value)}>
+    const state = this.state;
+    const tableData = [];
+    for (let i = 0; i < 30; i += 1) {
+      const rowData = [];
+      for (let j = 0; j < 9; j += 1) {
+        rowData.push(`${i}${j}`);
+      }
+      tableData.push(rowData);
+    }
+
+    return (
+      <View style={styles.container}>
+        <ScrollView horizontal={true}>
+          <View>
+            <Table borderStyle={{borderColor: '#C1C0B9'}}>
+              <Row data={state.tableHead} widthArr={state.widthArr} style={styles.header} textStyle={styles.text}/>
+            </Table>
+            <ScrollView style={styles.dataWrapper}>
+              <Table borderStyle={{borderColor: '#C1C0B9'}}>
+                {
+                  tableData.map((rowData, index) => (
+                    <Row
+                      key={index}
+                      data={rowData}
+                      widthArr={state.widthArr}
+                      style={[styles.row, index%2 && {backgroundColor: '#F7F6E7'}]}
+                      textStyle={styles.text}
+                    />
+                  ))
+                }
+              </Table>
+            </ScrollView>
+          </View>
+        </ScrollView>
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+  header: { height: 50, backgroundColor: '#537791' },
+  text: { textAlign: 'center', fontWeight: '100' },
+  dataWrapper: { marginTop: -1 },
+  row: { height: 40, backgroundColor: '#E7E6E1' }
+});
+```
+
+---
+
+#### Example4
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFour.png?raw=true" width="320"/>
+
+```jsx
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
+
+export default class ExampleFour extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableHead: ['Head', 'Head2', 'Head3', 'Head4'],
+      tableData: [
+        ['1', '2', '3', '4'],
+        ['a', 'b', 'c', 'd'],
+        ['1', '2', '3', '4'],
+        ['a', 'b', 'c', 'd']
+      ]
+    }
+  }
+
+  _alertIndex(index) {
+    Alert.alert(`This is row ${index + 1}`);
+  }
+
+  render() {
+    const state = this.state;
+    const element = (data, index) => (
+      <TouchableOpacity onPress={() => this._alertIndex(index)}>
         <View style={styles.btn}>
           <Text style={styles.btnText}>button</Text>
         </View>
       </TouchableOpacity>
     );
 
-    const tableData = [
-      ['1', '2', '3', ele('line 1')],
-      ['a', 'b', 'c', ele('line 2')],
-      ['1', '2', '3', ele('line 3')],
-      ['a', 'b', 'c', ele('line 4')]
-    ];
-  
     return (
-      <View>
-        <Table>
-          <Rows data={tableData} style={styles.row} textStyle={styles.text}/>
+      <View style={styles.container}>
+        <Table borderStyle={{borderColor: 'transparent'}}>
+          <Row data={state.tableHead} style={styles.head} textStyle={styles.text}/>
+          {
+            state.tableData.map((rowData, index) => (
+              <TableWrapper key={index} style={styles.row}>
+                {
+                  rowData.map((cellData, cellIndex) => (
+                    <Cell key={cellIndex} data={cellIndex === 3 ? element(cellData, index) : cellData} textStyle={styles.text}/>
+                  ))
+                }
+              </TableWrapper>
+            ))
+          }
         </Table>
       </View>
     )
@@ -295,14 +249,89 @@ class tableView extends Component {
 }
 
 const styles = StyleSheet.create({
-  text: { marginLeft: 5 },
-  row: { height: 30 },
-  btn: { width: 58, height: 18, backgroundColor: '#ccc', marginLeft: 15 },
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+  head: { height: 40, backgroundColor: '#808B97' },
+  text: { margin: 6 },
+  row: { flexDirection: 'row', backgroundColor: '#FFF1C1' },
+  btn: { width: 58, height: 18, backgroundColor: '#78B7BB',  borderRadius: 2 },
   btnText: { textAlign: 'center', color: '#fff' }
 });
 ```
 
 ---
+
+#### Example5
+<img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/exampleFive.png?raw=true" width="320"/>
+
+```jsx
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { Table, TableWrapper,Col, Cols, Cell } from 'react-native-table-component';
+
+export default class ExampleFive extends Component {
+  constructor(props) {
+    super(props);
+    const elementButton = (value) => (
+      <TouchableOpacity onPress={() => this._alertIndex(value)}>
+        <View style={styles.btn}>
+          <Text style={styles.btnText}>button</Text>
+        </View>
+      </TouchableOpacity>
+    );
+
+    this.state = {
+      tableTitle: ['Title', 'Title2', 'Title3', 'Title4'],
+      tableData: [
+        [elementButton('1'), 'a', 'b', 'c', 'd'],
+        [elementButton('2'), '1', '2', '3', '4'],
+        [elementButton('3'), 'a', 'b', 'c', 'd']
+      ]
+    }
+  }
+
+  _alertIndex(value) {
+    Alert.alert(`This is column ${value}`);
+  }
+
+  render() {
+    const state = this.state;
+    return (
+      <View style={styles.container}>
+        <Table style={{flexDirection: 'row'}}>
+          {/* Left Wrapper */}
+          <TableWrapper style={{width: 80}}>
+            <Cell data="" style={styles.singleHead}/>
+            <TableWrapper style={{flexDirection: 'row'}}>
+              <Col data={['H1', 'H2']} style={styles.head} heightArr={[60, 60]} textStyle={styles.text} />
+              <Col data={state.tableTitle} style={styles.title} heightArr={[30, 30, 30, 30]} textStyle={styles.titleText}></Col>
+            </TableWrapper>
+          </TableWrapper>
+
+          {/* Right Wrapper */}
+          <TableWrapper style={{flex:1}}>
+            <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30]} textStyle={styles.text}/>
+          </TableWrapper>
+        </Table>
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+  singleHead: { width: 80, height: 40, backgroundColor: '#c8e1ff' },
+  head: { flex: 1, backgroundColor: '#c8e1ff' },
+  title: { flex: 2, backgroundColor: '#f6f8fa' },
+  titleText: { marginRight: 6, textAlign:'right' },
+  text: { textAlign: 'center' },
+  btn: { width: 58, height: 18, marginLeft: 15, backgroundColor: '#c8e1ff', borderRadius: 2 },
+  btnText: { textAlign: 'center' }
+});
+```
+
+---
+
+
 
 <br/><br/>
 
@@ -318,6 +347,24 @@ const styles = StyleSheet.create({
 | <b>heightArr</b>  | Array | Height per line. | `[]` |
 
 <br/><br/>
+
+`Notice`
++ Cells in Col and Cols components do not support adaptive height.
++ If parent element is not table element, you should add the type of borderstyle.
+
+```jsx
+<ScrollView horizontal={true}>
+  {/* If parent element is not table element, you should add the type of borderstyle. */}
+  <TableWrapper borderStyle={{borderWidth: 1,borderColor: '#000',}}>
+    <Row data={tableHead} style={styles.head} textStyle={styles.headText} widthArr={widthArr}/>
+    {
+      tableData.map((data, i) => (
+        <Row key={i} data={data} style={[styles.list, i%2 && {backgroundColor: '#DFF5F2'}]} widthArr={widthArr} textStyle={styles.listText}/>
+      ))
+    }
+  </TableWrapper>
+</ScrollView>
+```
 
 ## License
 

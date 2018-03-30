@@ -11,16 +11,6 @@ export default class ExampleThree extends Component {
     super(props);
     this.state = {
       tableHead: ['Head', 'Head2', 'Head3', 'Head4', 'Head5', 'Head6', 'Head7', 'Head8', 'Head9'],
-      tableData: [
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
-      ],
       widthArr: [40, 60, 80, 100, 120, 140, 160, 180, 200]
     }
   }

@@ -351,6 +351,7 @@ const styles = StyleSheet.create({
 | <b>flexArr</b>    | Array | 每列的flex值 | `[]` |
 | <b>widthArr</b>   | Array | 每列的宽度值 | `[]` |
 | <b>heightArr</b>  | Array | 每行的高度值 | `[]` |
+| <b>...props</b>   | any   | 更多其它属性 |      |
 
 ---
 

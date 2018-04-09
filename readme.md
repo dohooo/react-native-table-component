@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
 | <b>flexArr</b>    | Array | Flex value per column. | `[]` |
 | <b>widthArr</b>   | Array | Width per column. | `[]` |
 | <b>heightArr</b>  | Array | Height per line. | `[]` |
-
+| <b>...props</b>   | any   | more props       |      |
 ---
 
 

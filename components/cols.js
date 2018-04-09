@@ -11,7 +11,7 @@ class Col extends Component {
   }
 
   render() {
-    const {data, style, width, heightArr, flex, textStyle, borderStyle} = this.props;
+    const {data, style, width, heightArr, flex, textStyle, borderStyle, ...props} = this.props;
 
     return (
       data ?
@@ -23,7 +23,7 @@ class Col extends Component {
         {
           data.map((item, i) => {
             const height = heightArr && heightArr[i];
-            return <Cell key={i} data={item} width={width} height={height} textStyle={textStyle} borderStyle={borderStyle}/>
+            return <Cell key={i} data={item} width={width} height={height} textStyle={textStyle} borderStyle={borderStyle} {...props}/>
           })
         }
       </View>
@@ -39,7 +39,7 @@ class Cols extends Component {
   }
 
   render() {
-    const {data, style, widthArr, heightArr, flexArr, textStyle, borderStyle} = this.props;
+    const {data, style, widthArr, heightArr, flexArr, textStyle, borderStyle, ...props} = this.props;
     let widthNum = 0;
     if (widthArr) {
       for(let i=0; i<widthArr.length; i++) {
@@ -57,7 +57,7 @@ class Cols extends Component {
           data.map((item, i) => {
             const flex = flexArr && flexArr[i];
             const width = widthArr && widthArr[i];
-            return <Col key={i} data={item} width={width} heightArr={heightArr} flex={flex} style={style} textStyle={textStyle} borderStyle={borderStyle}/>
+            return <Col key={i} data={item} width={width} heightArr={heightArr} flex={flex} style={style} textStyle={textStyle} borderStyle={borderStyle} {...props}/>
           })
         }
       </View>

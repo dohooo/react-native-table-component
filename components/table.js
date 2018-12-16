@@ -1,47 +1,33 @@
 import React, { Component } from 'react';
 import { View, ViewPropTypes, Text } from 'react-native';
 
-class Table extends Component {
+export class Table extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
     borderStyle: ViewPropTypes.style,
   }
 
-  _renderChildren(props) {
-    return React.Children.map(props.children, child => {
-      if(props.borderStyle && child.type.displayName !== "ScrollView") {
-        return React.cloneElement(child, {
-          borderStyle: props.borderStyle
-        })
-      } else {
-        return React.cloneElement(child)
-      }
-    })
-  }
-
   render() {
-    let borderWidth, borderColor;
-    if (this.props.borderStyle && this.props.borderStyle.borderWidth !== undefined) {
-      borderWidth = this.props.borderStyle.borderWidth;
-    } else {
-      borderWidth = 1;
-    }
-    if (this.props.borderStyle && this.props.borderStyle.borderColor) {
-      borderColor = this.props.borderStyle.borderColor;
-    } else {
-      borderColor = '#000';
-    }
+    const { borderStyle } = this.props
+    const borderLeftWidth = borderStyle && borderStyle.borderWidth || 1
+    const borderBottomWidth = borderStyle && borderStyle.borderColor || '#000'
 
     return (
       <View style={[
         this.props.style,
         {
-          borderLeftWidth: borderWidth,
-          borderBottomWidth: borderWidth,
-          borderColor: borderColor
+          borderLeftWidth,
+          borderBottomWidth,
+          borderColor
         }
       ]}>
-        {this._renderChildren(this.props)}
+        {
+          React.Children.map(
+            props.children,
+            child => React.cloneElement(
+              child,
+              props.borderStyle && child.type.displayName !== "ScrollView" ? { borderStyle: props.borderStyle } : {}))
+        }
       </View>
     )
   }
@@ -54,7 +40,7 @@ class TableWrapper extends Component {
 
   _renderChildren(props) {
     return React.Children.map(props.children, child => {
-      if(props.borderStyle) {
+      if (props.borderStyle) {
         return React.cloneElement(child, {
           borderStyle: props.borderStyle
         })
@@ -68,10 +54,14 @@ class TableWrapper extends Component {
     const { style } = this.props;
     return (
       <View style={style}>
-        {this._renderChildren(this.props)}
+        {
+          React.Children.map(
+            props.children,
+            child => React.cloneElement(
+              child,
+              props.borderStyle ? { borderStyle: props.borderStyle } : {}))
+        }
       </View>
     );
   }
 }
-
-export {Table, TableWrapper};

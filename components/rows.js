@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
-import Cell from './cell';
-import { sum } from "../utils/sum"
+import { Cell } from './cell';
+import { sum } from '../utils';
 
 export class Row extends Component {
   static propTypes = {
@@ -11,28 +10,29 @@ export class Row extends Component {
   }
 
   render() {
-    const { data, style, widthArr, height, flexArr, ...props } = this.props;
-    const widthSum = widthArr ? sum(widthArr) : 0
+    const { data, style, widthArr, height, flexArr, textStyle, ...props } = this.props;
+    let width = widthArr ? sum(widthArr) : 0;
+
     return (
       data ?
-        <View style={[
-          height && { height: height },
-          widthSum && { width: widthSum },
-          styles.row,
-          style
-        ]}>
-          {
-            data.map((item, i) => {
-              const flex = flexArr && flexArr[i];
-              const width = widthArr && widthArr[i];
-              return <Cell key={i} data={item} width={width} height={height} flex={flex} {...props} />
-            })
-          }
-        </View>
-        : null
-    )
+      <View style={[
+        height && { height },
+        width && { width },
+        styles.row,
+        style
+      ]}>
+        {
+          data.map((item, i) => {
+            const flex = flexArr && flexArr[i];
+            const wth = widthArr && widthArr[i];
+            return <Cell key={i} data={item} width={wth} height={height} flex={flex} textStyle={textStyle} {...props}/>
+          })
+        }
+      </View>
+      : null
+    );
   }
-}
+};
 
 export class Rows extends Component {
   static propTypes = {
@@ -41,31 +41,31 @@ export class Rows extends Component {
   }
 
   render() {
-    const { data, style, widthArr, heightArr, flexArr, ...props } = this.props;
-    const flexSum = flexArr ? sum(flexArr) : 0
-    const widthSum = widthArr ? sum(widthArr) : 0
+    const {data, style, widthArr, heightArr, flexArr, textStyle, ...props} = this.props;
+    const flex = flexArr ? sum(flexArr) : 0;
+    const width = widthArr ? sum(widthArr) : 0;
 
     return (
       data ?
-        <View style={[
-          flexNum && { flex: flexSum },
-          widthNum && { width: widthSum },
-        ]}>
-          {
-            data.map((item, i) => {
-              const height = heightArr && heightArr[i];
-              return <Row key={i} data={item} widthArr={widthArr} height={height} flexArr={flexArr} style={style} {...props} />
-            })
-          }
-        </View>
-        : null
-    )
+      <View style={[
+        flex && { flex },
+        width && { width },
+      ]}>
+        {
+          data.map((item, i) => {
+            const height = heightArr && heightArr[i];
+            return <Row key={i} data={item} widthArr={widthArr} height={height} flexArr={flexArr} style={style} textStyle={textStyle} {...props}/>
+          })
+        }
+      </View>
+      : null
+    );
   }
-}
+};
 
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     overflow: 'hidden'
   },
-})
+});

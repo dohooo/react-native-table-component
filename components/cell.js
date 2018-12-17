@@ -11,8 +11,8 @@ export class Cell extends Component {
   render() {
     const { data, width, height, flex, style, textStyle, borderStyle, ...props } = this.props;
     const textDom = React.isValidElement(data) ? data : <Text style={[textStyle, styles.text]} {...props}>{data}</Text>;
-    const borderTopWidth = borderStyle && borderStyle.borderWidth || 1
-    const borderRightWidth = borderStyle && borderStyle.borderColor || '#000'
+    const borderTopWidth = borderRightWidth = borderStyle && borderStyle.borderWidth || 1;
+    const borderColor = borderStyle && borderStyle.borderColor || '#000';
 
     return (
       <View style={[
@@ -30,15 +30,11 @@ export class Cell extends Component {
       ]}>
         {textDom}
       </View>
-    )
+    );
   }
-}
+};
 
 const styles = StyleSheet.create({
-  cell: {
-    justifyContent: 'center',
-  },
-  text: {
-    backgroundColor: 'transparent',
-  },
-})
+  cell: { justifyContent: 'center' },
+  text: { backgroundColor: 'transparent' }
+});

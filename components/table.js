@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { View, ViewPropTypes, Text } from 'react-native';
+import { View, ViewPropTypes } from 'react-native';
 
 export class Table extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
-    borderStyle: ViewPropTypes.style,
+    borderStyle: ViewPropTypes.style
+  }
+
+  _renderChildren(props) {
+    return React.Children.map(
+      props.children,
+      child => React.cloneElement(child, props.borderStyle && child.type.displayName !== "ScrollView" ? { borderStyle: props.borderStyle } : {})
+    );
   }
 
   render() {
-    const { borderStyle } = this.props
-    const borderLeftWidth = borderStyle && borderStyle.borderWidth || 1
-    const borderBottomWidth = borderStyle && borderStyle.borderColor || '#000'
+    const { borderStyle } = this.props;
+    const borderLeftWidth = borderBottomWidth = borderStyle && borderStyle.borderWidth || 1;
+    const borderColor = borderStyle && borderStyle.borderColor || '#000';
 
     return (
       <View style={[
@@ -21,47 +28,30 @@ export class Table extends Component {
           borderColor
         }
       ]}>
-        {
-          React.Children.map(
-            props.children,
-            child => React.cloneElement(
-              child,
-              props.borderStyle && child.type.displayName !== "ScrollView" ? { borderStyle: props.borderStyle } : {}))
-        }
+        {this._renderChildren(this.props)}
       </View>
-    )
+    );
   }
-}
+};
 
-class TableWrapper extends Component {
+export class TableWrapper extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
   }
 
   _renderChildren(props) {
-    return React.Children.map(props.children, child => {
-      if (props.borderStyle) {
-        return React.cloneElement(child, {
-          borderStyle: props.borderStyle
-        })
-      } else {
-        return React.cloneElement(child)
-      }
-    })
+    return React.Children.map(
+      props.children,
+      child => React.cloneElement(child, props.borderStyle ? { borderStyle: props.borderStyle } : {})
+    );
   }
 
   render() {
     const { style } = this.props;
     return (
       <View style={style}>
-        {
-          React.Children.map(
-            props.children,
-            child => React.cloneElement(
-              child,
-              props.borderStyle ? { borderStyle: props.borderStyle } : {}))
-        }
+        {this._renderChildren(this.props)}
       </View>
     );
   }
-}
+};

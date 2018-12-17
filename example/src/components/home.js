@@ -12,7 +12,8 @@ export default class Home extends Component {
       'ExampleTwo', 
       'ExampleThree', 
       'ExampleFour', 
-      'ExampleFive'
+      'ExampleFive',
+      'ExampleSix'
     ];
     return (
       <View style={styles.container}>

@@ -5,6 +5,7 @@ import ExampleTwo from './components/exampleTwo';
 import ExampleThree from './components/exampleThree';
 import ExampleFour from './components/exampleFour';
 import ExampleFive from './components/exampleFive';
+import ExampleSix from './components/exampleSix';
 
 const stackNavigatorConfig = {
   navigationOptions: {
@@ -38,5 +39,8 @@ export default StackNavigator ({
   },
   ExampleFive: {
     screen: ExampleFive
+  },
+  ExampleSix: {
+    screen: ExampleSix
   }
 }, stackNavigatorConfig);

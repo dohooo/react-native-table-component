@@ -10,7 +10,7 @@ export class Row extends Component {
   };
 
   render() {
-    const { data, style, widthArr, height, flexArr, textStyle, ...props } = this.props;
+    const { data, style, widthArr, height, flexArr, textStyle, cellTextStyle, ...props } = this.props;
     let width = widthArr ? sum(widthArr) : 0;
 
     return data ? (
@@ -18,7 +18,17 @@ export class Row extends Component {
         {data.map((item, i) => {
           const flex = flexArr && flexArr[i];
           const wth = widthArr && widthArr[i];
-          return <Cell key={i} data={item} width={wth} height={height} flex={flex} textStyle={textStyle} {...props} />;
+          return (
+            <Cell
+              key={i}
+              data={item}
+              width={wth}
+              height={height}
+              flex={flex}
+              textStyle={[cellTextStyle && cellTextStyle(item), textStyle]}
+              {...props}
+            />
+          );
         })}
       </View>
     ) : null;

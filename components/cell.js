@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ViewPropTypes, Text, StyleSheet,TouchableOpacity } from 'react-native';
+import { View, ViewPropTypes, Text,Image, StyleSheet,TouchableOpacity } from 'react-native';
 
 export class Cell extends Component {
   static propTypes = {
@@ -16,7 +16,7 @@ export class Cell extends Component {
   };
 
   render() {
-    const { data, width, height, flex, style, textStyle, image,imageStyles, onImageClick, borderStyle,disabled, ...props } = this.props;
+    const { data, width, height, flex, style, textStyle,image,imageStyles, onImageClick, borderStyle,disabled, ...props } = this.props;
     const textDom = React.isValidElement(data) ? (
       data
     ) : (
@@ -51,7 +51,7 @@ export class Cell extends Component {
               <Image
                     resizeMode={'contain'}
                     style={imageStyles}
-                    source={icon}/>
+                    source={image}/>
                 
       </TouchableOpacity>
     );

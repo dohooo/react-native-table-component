@@ -20,8 +20,8 @@ export class Cell extends Component {
     const textDom = React.isValidElement(data) ? (
       data
     ) : (
-      <Text style={[textStyle, styles.text]} {...props}>
-        {data}
+      <Text style={[textStyle, styles.text]} numberOfLines={2} {...props}>
+         {data[0]}
       </Text>
     );
     const borderTopWidth = (borderStyle && borderStyle.borderWidth) || 1;
@@ -48,10 +48,12 @@ export class Cell extends Component {
       onPress={this.onClickIcon.bind(this)} disabled={disabled}
       >
         {textDom}
+      {data[1]
               <Image
                     resizeMode={'contain'}
                     style={imageStyles}
                     source={image}/>
+                      :<View/>}
                 
       </TouchableOpacity>
     );

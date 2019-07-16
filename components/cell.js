@@ -45,8 +45,8 @@ export class Cell extends Component {
           !width && !flex && !height && !style && { flex: 1 },
           style
         ]}
-      onPress={this.onClickIcon.bind(this)} disabled={disabled}
-      >
+      onPress={this.onClickIcon.bind(this)} disabled={!data[1]}> //We can disable all the cells by disable prop disabled={disabled}
+                                                                 //and also based on the image
         {textDom}
       {data[1]
               <Image

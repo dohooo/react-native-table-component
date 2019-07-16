@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {Table, TableWrapper, Cell} from 'react-native-table-component';
 import {Row} from '../../../../base/services/rows'
 
-export default class StaffReportStyle extends Component {
+export default class AddImageToCells extends Component {
     static navigationOptions = {
         title: 'AddingImageToCell'
     }

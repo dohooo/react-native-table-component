@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, Text, StyleSheet,TouchableOpacity } from 'react-native';
 
 export class Cell extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
-    borderStyle: ViewPropTypes.style
+    borderStyle: ViewPropTypes.style,
+    onImageClick:PropTypes.func,
+    imageStyles: PropTypes.objectOf({
+            height:PropTypes.any,
+            width:PropTypes.any,
+            borderRadius: PropTypes.any,
+            tintColor: PropTypes.string
+        })
   };
 
   render() {
-    const { data, width, height, flex, style, textStyle, borderStyle, ...props } = this.props;
+    const { data, width, height, flex, style, textStyle, image,imageStyles, onImageClick, borderStyle,disabled, ...props } = this.props;
     const textDom = React.isValidElement(data) ? (
       data
     ) : (
@@ -22,12 +29,14 @@ export class Cell extends Component {
     const borderColor = (borderStyle && borderStyle.borderColor) || '#000';
 
     return (
-      <View
+      <TouchableOpacity
         style={[
           {
             borderTopWidth,
             borderRightWidth,
-            borderColor
+            borderColor,
+            flexDirection:'row',
+            alignItems:'center'
           },
           styles.cell,
           width && { width },
@@ -36,11 +45,22 @@ export class Cell extends Component {
           !width && !flex && !height && !style && { flex: 1 },
           style
         ]}
+      onPress={this.onClickIcon.bind(this)} disabled={disabled}
       >
         {textDom}
-      </View>
+              <Image
+                    resizeMode={'contain'}
+                    style={imageStyles}
+                    source={icon}/>
+                
+      </TouchableOpacity>
     );
   }
+   onImageClick(){
+         if(this.props.onImageClick()){
+             this.props.onImageClick()
+         }
+    }
 }
 
 const styles = StyleSheet.create({

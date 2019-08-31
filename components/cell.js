@@ -17,7 +17,7 @@ export class Cell extends Component {
         {data}
       </Text>
     );
-    const borderTopWidth = (borderStyle && borderStyle.borderWidth) || 1;
+    const borderTopWidth = (borderStyle && borderStyle.borderWidth) || 0;
     const borderRightWidth = borderTopWidth;
     const borderColor = (borderStyle && borderStyle.borderColor) || '#000';
 

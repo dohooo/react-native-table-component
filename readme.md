@@ -39,6 +39,8 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
   - 'TableWraper' changed to 'TableWrapper';
 + [v1.1.1]
   - Data supports incoming Element types
++ [v1.2.1]
+  - Change the default value of the borderWidth from 1 to 0
 <br/><br/>
 
 ## Examples
@@ -114,7 +116,7 @@ export default class ExampleTwo extends Component {
     const state = this.state;
     return (
       <View style={styles.container}>
-        <Table>
+        <Table borderStyle={{borderWidth: 1}}>
           <Row data={state.tableHead} flexArr={[1, 2, 1, 1]} style={styles.head} textStyle={styles.text}/>
           <TableWrapper style={styles.wrapper}>
             <Col data={state.tableTitle} style={styles.title} heightArr={[28,28]} textStyle={styles.text}/>
@@ -170,11 +172,11 @@ export default class ExampleThree extends Component {
       <View style={styles.container}>
         <ScrollView horizontal={true}>
           <View>
-            <Table borderStyle={{borderColor: '#C1C0B9'}}>
+            <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
               <Row data={state.tableHead} widthArr={state.widthArr} style={styles.header} textStyle={styles.text}/>
             </Table>
             <ScrollView style={styles.dataWrapper}>
-              <Table borderStyle={{borderColor: '#C1C0B9'}}>
+              <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
                 {
                   tableData.map((rowData, index) => (
                     <Row
@@ -312,7 +314,7 @@ export default class ExampleFive extends Component {
     const state = this.state;
     return (
       <View style={styles.container}>
-        <Table style={{flexDirection: 'row'}}>
+        <Table style={{flexDirection: 'row'}} borderStyle={{borderWidth: 1}}>
           {/* Left Wrapper */}
           <TableWrapper style={{width: 80}}>
             <Cell data="" style={styles.singleHead}/>
@@ -355,7 +357,7 @@ const styles = StyleSheet.create({
 |---|---|---|---|
 | <b>data</b>       | Array | Table data. | `null` |
 | <b>style</b>      | Style | Container style. | `null` |
-| <b>borderStyle</b>| Object| Table border line width and color. | `{ borderWidth: 1, borderColor: #000 }` |
+| <b>borderStyle</b>| Object| Table border line width and color. | `{ borderWidth: 0, borderColor: #000 }` |
 | <b>textStyle</b>  | Style | Cell font style. | `null` |
 | <b>flexArr</b>    | Array | Flex value per column. | `[]` |
 | <b>widthArr</b>   | Array | Width per column. | `[]` |

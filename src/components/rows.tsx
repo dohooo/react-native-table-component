@@ -7,8 +7,8 @@ interface IRowOptions {
 	data: string[] | JSX.Element[];
 	style?: ViewStyle;
 	widthArr?: number[];
-	height: number;
-	flexArr: number[];
+	height?: number;
+	flexArr?: number[];
 	textStyle?: TextStyle;
 }
 
@@ -40,8 +40,8 @@ interface IRowsOptions {
 	data: string[][] | JSX.Element[][];
 	style?: ViewStyle;
 	widthArr?: number[];
-	heightArr: number[];
-	flexArr: number[];
+	heightArr?: number[];
+	flexArr?: number[];
 	textStyle?: TextStyle;
 }
 

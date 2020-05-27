@@ -7,8 +7,8 @@ interface IColOptions {
 	data: string[] | JSX.Element[];
 	style?: ViewStyle;
 	width?: number;
-	heightArr: number[];
-	flex: number;
+	heightArr?: number[];
+	flex?: number;
 	textStyle?: TextStyle;
 }
 
@@ -33,9 +33,9 @@ export class Col extends Component<IColOptions> {
 interface IColsOptions {
 	data: string[][] | JSX.Element[][];
 	style?: ViewStyle;
-	widthArr: number[];
-	heightArr: number[];
-	flexArr: number[];
+	widthArr?: number[];
+	heightArr?: number[];
+	flexArr?: number[];
 	textStyle?: TextStyle;
 }
 

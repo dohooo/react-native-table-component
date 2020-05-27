@@ -1,6 +1,6 @@
 {
 	"name": "react-native-table-component",
-	"version": "4.6.202005271636",
+	"version": "4.6.202005271637",
 	"description": "Build table for react native.",
 	"main": "dist/index.js",
 	"scripts": {

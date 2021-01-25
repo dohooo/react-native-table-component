@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">React Native Table Component</h1>
-<h3>🚀🚀🚀 Re-written in TypeScript</h3>
+<h3>🚀🚀🚀 Fully re-written in TypeScript and Functional Components</h3>
 
 This is a table component for react native.
 

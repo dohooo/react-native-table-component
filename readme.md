@@ -3,7 +3,10 @@
 </p>
 
 <h1 align="center">React Native Table Component</h1>
-<h3>🚀🚀🚀 Fully re-written in TypeScript and Functional Components</h3>
+<h3>🚀🚀🚀 Fully re-written in TypeScript and Functional Components.</h3>
+<p>
+All credit for original work goes to <a data-hovercard-type="repository" data-hovercard-url="/Gil2015/react-native-table-component/hovercard" href="/Gil2015/react-native-table-component">Gil2015/react-native-table-component</a>
+</p>
 
 This is a table component for react native.
 

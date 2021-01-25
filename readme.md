@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center">React Native Table Component</h1>
+<h4>Re-written in TypeScript</h4>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://badge.fury.io/js/react-native-table-component.svg" /></a>

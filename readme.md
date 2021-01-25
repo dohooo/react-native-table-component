@@ -5,12 +5,6 @@
 <h1 align="center">React Native Table Component</h1>
 <h3>🚀🚀🚀 Re-written in TypeScript</h3>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://badge.fury.io/js/react-native-table-component.svg" /></a>
-  <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg" /></a>
-  <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://img.shields.io/npm/dm/react-native-table-component.svg?colorB=orange" /></a>
-</p>
-
 This is a table component for react native.
 
 - [Installation](#installation)
@@ -24,7 +18,7 @@ This is a table component for react native.
 <br/><br/>
 
 ## Installation
-> npm install react-native-table-component
+> yarn add m4ttheweric/react-native-table-component#semver:^2.0.1
 
 `USE:`
 ```jsx
@@ -33,15 +27,6 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 
 <img src="https://github.com/Gil2015/tools_file/blob/master/img/react-native-table-component/example.jpg?raw=true" width="375"/>
 
-<br/><br/>
-
-## Changelogs
-+ [v1.0.3]
-  - 'TableWraper' changed to 'TableWrapper';
-+ [v1.1.1]
-  - Data supports incoming Element types
-+ [v1.2.1]
-  - Change the default value of the borderWidth from 1 to 0
 <br/><br/>
 
 ## Examples

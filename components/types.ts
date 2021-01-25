@@ -1,12 +1,12 @@
 import { type } from 'os';
 import { ReactText } from 'react';
-import { TextStyle, ViewStyle } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type Data = JSX.Element | ReactText[][] | ReactText[] | ReactText;
 export interface DefaultProps<DataType extends Data> {
-  style?: ViewStyle;
-  textStyle?: TextStyle;
-  borderStyle?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  borderStyle?: StyleProp<ViewStyle>;
   data: DataType;
   width?: ReactText;
   height?: ReactText;
@@ -17,11 +17,11 @@ export interface DefaultProps<DataType extends Data> {
 }
 
 export type TableComponent = React.FC<{
-  style?: ViewStyle;
-  borderStyle?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
+  borderStyle?: StyleProp<ViewStyle>;
 }>;
 
 export type TableProps = React.PropsWithChildren<{
-  style?: ViewStyle;
-  borderStyle?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
+  borderStyle?: StyleProp<ViewStyle>;
 }>;

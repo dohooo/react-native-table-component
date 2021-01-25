@@ -6,7 +6,7 @@ export type Data = JSX.Element | ReactText[][] | ReactText[] | ReactText;
 export interface DefaultProps<DataType extends Data> {
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
-  borderStyle?: StyleProp<ViewStyle>;
+  borderStyle?: ViewStyle;
   data: DataType;
   width?: ReactText;
   height?: ReactText;
@@ -18,10 +18,10 @@ export interface DefaultProps<DataType extends Data> {
 
 export type TableComponent = React.FC<{
   style?: StyleProp<ViewStyle>;
-  borderStyle?: StyleProp<ViewStyle>;
+  borderStyle?: ViewStyle;
 }>;
 
 export type TableProps = React.PropsWithChildren<{
   style?: StyleProp<ViewStyle>;
-  borderStyle?: StyleProp<ViewStyle>;
+  borderStyle?: ViewStyle;
 }>;

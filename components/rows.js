@@ -7,7 +7,7 @@ import { sum } from '../utils';
 export class Row extends Component {
   static propTypes = {
     style: PropTypes.object,
-    textStyle: Text.propTypes.style
+    textStyle: PropTypes.object
   };
 
   render() {
@@ -29,7 +29,7 @@ export class Row extends Component {
 export class Rows extends Component {
   static propTypes = {
     style: PropTypes.object,
-    textStyle: Text.propTypes.style
+    textStyle: PropTypes.object
   };
 
   render() {

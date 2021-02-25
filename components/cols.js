@@ -8,7 +8,7 @@ export class Col extends Component {
   static propTypes = {
     width: PropTypes.number,
     style: PropTypes.object,
-    textStyle: Text.propTypes.style
+    textStyle: PropTypes.object
   };
 
   render() {
@@ -28,7 +28,7 @@ export class Col extends Component {
 export class Cols extends Component {
   static propTypes = {
     style: PropTypes.object,
-    textStyle: Text.propTypes.style
+    textStyle: PropTypes.object
   };
 
   render() {

@@ -21,7 +21,7 @@ This is a table component for react native.
 <br/><br/>
 
 ## Installation
-> yarn add m4ttheweric/react-native-table-component#semver:^2.0.1
+> yarn add m4ttheweric/react-native-table-component#semver:^2.0.2
 
 `USE:`
 ```jsx

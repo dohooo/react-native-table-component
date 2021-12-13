@@ -10,6 +10,9 @@
   <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://img.shields.io/npm/dm/react-native-table-component.svg?colorB=orange" /></a>
 </p>
 
+<p><span>*</span> 由于工作原因该项目不再维护，如有需要可以转让</p>
+<p>如果您对项目感兴趣，请通过电子邮件联系594244274@qq.com.</p>
+
 为react-native设计的表格组件.
 
 - [安装](#安装)

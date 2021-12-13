@@ -10,6 +10,10 @@
   <a href="https://www.npmjs.com/package/react-native-table-component"><img src="https://img.shields.io/npm/dm/react-native-table-component.svg?colorB=orange" /></a>
 </p>
 
+<p><span style="color: red;">*</span> The project is no longer maintained due to work reasons and can be transferred if necessary.</p>
+<p>If you are interested in maintaining the project, please contact the email 594244274@qq.com.</p>
+<br/><br/>
+
 This is a table component for react native.
 
 - [Installation](#installation)

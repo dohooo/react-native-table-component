@@ -1,36 +1,47 @@
 {
-  "name": "react-native-table-component",
-  "version": "1.2.1",
-  "description": "Build table for react native.",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "prettify": "prettier --write components/**/*.js utils/**/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gil2015/react-native-table-component.git"
-  },
-  "keywords": [
-    "react-native",
-    "table",
-    "react-native-cell",
-    "react-native-table",
-    "react-native-table-component"
-  ],
-  "author": "gil2015",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Gil2015/react-native-table-component/issues"
-  },
-  "homepage": "https://github.com/Gil2015/react-native-table-component#readme",
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-react-native": "^3.5.0",
-    "prettier": "^1.15.3",
-    "react": "^16.7.0",
-    "react-native": "^0.57.8"
-  }
+	"name": "react-native-table-component",
+	"version": "1.2.1",
+	"description": "Build table for react native.",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "tsc -w",
+		"lint": "tslint -p tsconfig.json",
+		"prettify": "prettier --write components/**/*.js utils/**/*.js",
+		"compile": "tsc",
+		"build": "npm run lint && npm run compile"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gil2015/react-native-table-component.git"
+	},
+	"keywords": [
+		"react-native",
+		"table",
+		"react-native-cell",
+		"react-native-table",
+		"react-native-table-component"
+	],
+	"author": "gil2015",
+	"maintainers": [
+		{
+			"name": "mashizhen",
+			"email": "dohard@163.com"
+		}
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Gil2015/react-native-table-component/issues"
+	},
+	"homepage": "https://github.com/Gil2015/react-native-table-component#readme",
+	"devDependencies": {
+		"prettier": "^1.15.3",
+		"@types/react": "latest",
+		"@types/react-native": "latest",
+		"del": "latest",
+		"prompts": "latest",
+		"react": "latest",
+		"react-native": "latest",
+		"tslint": "latest",
+		"typescript": "next"
+	}
 }

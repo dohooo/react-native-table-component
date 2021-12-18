@@ -1,1 +1,12 @@
-example
+src/
+node_modules/
+.vscode/
+tsconfig.json
+tslint.json
+.babelrc
+.cnpmrc
+.gitignore
+.npmignore
+.npmrc
+.yarnrc
+publish.sh

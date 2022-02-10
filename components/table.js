@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
 
 export class Table extends Component {
   static propTypes = {
-    style: ViewPropTypes.style,
-    borderStyle: ViewPropTypes.style
+    style: PropTypes.object,
+    borderStyle: PropTypes.object
   };
 
   _renderChildren(props) {
@@ -41,7 +42,7 @@ export class Table extends Component {
 
 export class TableWrapper extends Component {
   static propTypes = {
-    style: ViewPropTypes.style
+    style: PropTypes.object
   };
 
   _renderChildren(props) {

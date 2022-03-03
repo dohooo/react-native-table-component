@@ -4,8 +4,12 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export class Cell extends Component {
   static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object,
+    data: PropTypes.array,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    flex: PropTypes.number,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     borderStyle: PropTypes.object
   };
 

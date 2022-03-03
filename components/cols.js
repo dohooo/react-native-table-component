@@ -6,9 +6,12 @@ import { sum } from '../utils';
 
 export class Col extends Component {
   static propTypes = {
+    data: PropTypes.array,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     width: PropTypes.number,
-    style: PropTypes.object,
-    textStyle: PropTypes.object
+    heightArr: PropTypes.arrayOf(PropTypes.number),
+    flex: PropTypes.number,
+    textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   };
 
   render() {
@@ -27,8 +30,12 @@ export class Col extends Component {
 
 export class Cols extends Component {
   static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
+    data: PropTypes.array,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    widthArr: PropTypes.arrayOf(PropTypes.number),
+    heightArr: PropTypes.arrayOf(PropTypes.number),
+    flexArr: PropTypes.arrayOf(PropTypes.number),
+    textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   };
 
   render() {

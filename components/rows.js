@@ -6,8 +6,13 @@ import { sum } from '../utils';
 
 export class Row extends Component {
   static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
+    data: PropTypes.array,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    widthArr: PropTypes.arrayOf(PropTypes.number),
+    height: PropTypes.number,
+    flexArr: PropTypes.arrayOf(PropTypes.number),
+    textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    cellTextStyle: PropTypes.func
   };
 
   render() {
@@ -38,8 +43,12 @@ export class Row extends Component {
 
 export class Rows extends Component {
   static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
+    data: PropTypes.array,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    widthArr: PropTypes.arrayOf(PropTypes.number),
+    heightArr: PropTypes.arrayOf(PropTypes.number),
+    flexArr: PropTypes.arrayOf(PropTypes.number),
+    textStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   };
 
   render() {

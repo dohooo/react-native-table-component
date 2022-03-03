@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 export class Table extends Component {
   static propTypes = {
-    style: PropTypes.object,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     borderStyle: PropTypes.object
   };
 
@@ -42,7 +42,7 @@ export class Table extends Component {
 
 export class TableWrapper extends Component {
   static propTypes = {
-    style: PropTypes.object
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   };
 
   _renderChildren(props) {

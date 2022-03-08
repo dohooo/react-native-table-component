@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export class Cell extends Component {
   static propTypes = {
-    data: PropTypes.array,
+    data: PropTypes.any,
     width: PropTypes.number,
     height: PropTypes.number,
     flex: PropTypes.number,

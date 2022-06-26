@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList  } from 'react-native';
 import { Cell } from './cell';
 import { sum } from '../utils';
 
@@ -58,21 +58,30 @@ export class Rows extends Component {
 
     return data ? (
       <View style={[flex && { flex }, width && { width }]}>
-        {data.map((item, i) => {
-          const height = heightArr && heightArr[i];
-          return (
-            <Row
-              key={i}
-              data={item}
-              widthArr={widthArr}
-              height={height}
-              flexArr={flexArr}
-              style={style}
-              textStyle={textStyle}
-              {...props}
-            />
-          );
-        })}
+        <FlatList
+            style={{ marginBottom: 77 }}
+            keyExtractor={(item, index) => index.toString()}
+            data={data}
+            renderItem={({ item, index }) => {
+              const height = heightArr && heightArr[i];
+              return <Row key={index} data={item} widthArr={widthArr} height={height} flexArr={flexArr} style={style} textStyle={textStyle} {...props} />
+            }}
+        />
+        {/*{data.map((item, i) => {*/}
+        {/*  const height = heightArr && heightArr[i];*/}
+        {/*  return (*/}
+        {/*    <Row*/}
+        {/*      key={i}*/}
+        {/*      data={item}*/}
+        {/*      widthArr={widthArr}*/}
+        {/*      height={height}*/}
+        {/*      flexArr={flexArr}*/}
+        {/*      style={style}*/}
+        {/*      textStyle={textStyle}*/}
+        {/*      {...props}*/}
+        {/*    />*/}
+        {/*  );*/}
+        {/*})}*/}
       </View>
     ) : null;
   }

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {View, Text, StyleSheet} from "react-native";
 
+
 export class Cell extends Component {
     static propTypes = {
         data: PropTypes.any,

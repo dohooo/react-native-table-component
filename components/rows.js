@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import {Cell} from "./cell";
 import {sum} from "utils";
 
+
 export class Row extends Component {
     static propTypes = {
         data: PropTypes.array,
@@ -60,13 +61,22 @@ export class Rows extends Component {
         return data ? (
             <View style={[flex && {flex}, width && {width}]}>
                 <FlatList
-                    style={{marginBottom: 77}} // TODO: проверить
                     keyExtractor={(item, index) => index.toString()}
                     data={data}
                     renderItem={({item, index}) => {
                         const height = heightArr && heightArr[i];
-                        return <Row key={index} data={item} widthArr={widthArr} height={height} flexArr={flexArr}
-                            style={style} textStyle={textStyle} {...props} />;
+                        return (
+                            <Row
+                                key={index}
+                                data={item}
+                                widthArr={widthArr}
+                                height={height}
+                                flexArr={flexArr}
+                                style={style}
+                                textStyle={textStyle}
+                                {...props}
+                            />
+                        );
                     }}
                 />
             </View>

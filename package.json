@@ -29,7 +29,6 @@
     "eslint": "^8.19.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-native": "^4.0.0",
     "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-native": "0.68.2"

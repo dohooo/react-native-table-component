@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {View, StyleSheet} from "react-native";
 import {Cell} from "./cell";
-import {sum} from "utils";
+import {sum} from "../utils";
 
 export class Col extends Component {
     static propTypes = {

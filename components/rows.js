@@ -26,7 +26,7 @@ export class Row extends Component {
               width={wth}
               height={height}
               flex={flex}
-              textStyle={[cellTextStyle && cellTextStyle(item), textStyle]}
+              textStyle={...(cellTextStyle ? cellTextStyle(item) : {}), ...textStyle}
               {...props}
             />
           );

@@ -3,7 +3,7 @@ import {View, StyleSheet, FlatList} from "react-native";
 import PropTypes from "prop-types";
 
 import {Cell} from "./cell";
-import {sum} from "utils";
+import {sum} from "../utils";
 
 
 export class Row extends Component {
